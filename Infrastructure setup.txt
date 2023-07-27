@@ -1,0 +1,164 @@
+User
+Hi, how to create a new repo in GitHub with start branch main.
+
+ChatGPT
+Creating a new repository on GitHub is a straightforward process. Here are the steps to do so with the default branch named "main" rather than "master":
+
+Go to GitHub and sign in with your account.
+
+After you're signed in, you will see a '+' sign on the upper right corner of the page. Click on the '+' sign, and select 'New repository' from the dropdown menu.
+
+You will be taken to a new page where you can create your repository. Here, you can choose a name for your repository under the 'Repository name' field.
+
+You can also provide a description for your repository in the 'Description' field (this is optional).
+
+Choose whether your repository should be 'Public' (visible to everyone) or 'Private' (only visible to people you choose).
+
+You will see an option 'Initialize this repository with'. Check the box where it says 'Add a README file'.
+
+Now, look for the section named 'Branch name'. In the 'Branch name' field, enter 'main'. This will create your default branch with the name 'main' instead of 'master'.
+
+When everything is filled in, click on the 'Create repository' button at the bottom of the page.
+
+And that's it! You have created a new repository on GitHub with 'main' as the default branch. Your repository is now ready to be used.
+
+Remember, you must have a GitHub account to perform these actions. If you don't have one, you can easily create an account on the GitHub website.
+
+
+
+User
+Thanks. And now I wanna to start develop in VSCode. How I can clone this repo in my computer
+
+ChatGPT
+Sure, let's see how to clone a GitHub repository to your local machine using VSCode.
+
+First, open VSCode.
+
+Click on the 'Source Control' button on the left Activity Bar.
+
+At the top of the Source Control pane, click on the 'Clone Repository' button (icon looks like a circle with an arrow around it).
+
+VSCode will then ask you to enter the URL of the repository. Go to the repository on GitHub, click the green 'Code' button, and copy the URL provided there.
+
+Paste this URL into the VSCode prompt and hit Enter.
+
+Then, select a directory on your local machine where you want the repository to be cloned into.
+
+After selecting the directory, a new notification will pop up at the bottom right of your screen asking if you would like to open the cloned repository. Click "Open" to start working on your project immediately.
+
+VSCode will clone the repository from GitHub to the location you selected and then open that cloned repository. You'll be ready to start working with the code on your local machine.
+
+Make sure that Git is installed on your machine and that VSCode recognizes it. If Git is not installed, you won't be able to clone or interact with repositories. You can download Git from its official website: https://git-scm.com/downloads
+
+
+
+
+User
+how I can bind SonarCloud with my GitHub repo
+
+ChatGPT
+SonarCloud is a cloud service offered by SonarSource for code quality inspection. By connecting your GitHub repository with SonarCloud, your code will be automatically analyzed and any potential bugs, vulnerabilities or code smells will be flagged.
+
+Here are the steps to bind your GitHub repository with SonarCloud:
+
+Go to SonarCloud and click on "Log in" at the top right of the page.
+
+You will see options to log in with GitHub, Bitbucket or Azure DevOps. Since your repository is on GitHub, click on "Log in with GitHub".
+
+You will be redirected to GitHub for authentication. Click on "Authorize sonarsource" to allow SonarCloud to access your GitHub repositories.
+
+After authorization, you'll be redirected back to SonarCloud. Now you need to create an organization on SonarCloud, which should be linked to your GitHub account. Click on "Create new organization".
+
+Choose the GitHub account/organization with which you want to associate this SonarCloud organization. Click on "Continue".
+
+You will be asked to install the SonarCloud app on the selected GitHub organization. Click on "Install SonarCloud on this organization".
+
+Now, you will see the "Add project" page. Here, you will see the repositories from your GitHub organization. Choose the repository that you want to analyze and click on the "Set Up" button next to it.
+
+In the following steps, you'll set up the way your project is analyzed. Depending on your project's language and build tool, you might need to add a configuration file (sonar-project.properties) to your repository, or modify your build scripts to include SonarCloud analysis.
+
+Once you complete these steps, your GitHub repository will be connected to SonarCloud. SonarCloud will automatically analyze your code with each commit, and provide a detailed report about the code quality.
+
+Remember, this process requires you to have administrative access to the GitHub repository, and you need to be logged in to SonarCloud with a GitHub account that has access to the repository.
+
+
+User
+Now I wanna to create a react app. using npx, create-react-app, react-i18next i18next 
+
+ChatGPT
+You can use the create-react-app package to create a new React application, and then add the react-i18next and i18next packages for internationalization.
+
+Here are the steps you can follow:
+
+First, make sure you have Node.js and npm installed. You can download Node.js from the official website: https://nodejs.org/. The npm package manager comes bundled with Node.js.
+
+Open your terminal (or command prompt).
+
+Navigate to the directory where you want to create your new project.
+
+To create a new React application, run the following command:
+
+lua
+Copy code
+npx create-react-app my-app
+Replace my-app with the name you want to give to your new project.
+
+Once the process is completed, navigate into your new project folder with:
+
+bash
+Copy code
+cd my-app
+Now, to add react-i18next and i18next, run the following command:
+
+Copy code
+npm install react-i18next i18next
+Now, you have a new React application created with create-react-app, and react-i18next & i18next installed for handling internationalization.
+
+You'll need to set up i18next and react-i18next inside your application for use. The documentation on the react-i18next GitHub page can guide you through this process.
+
+
+
+
+User
+I have an error: 
+You are running `create-react-app` 4.0.3, which is behind the latest release (5.0.1).
+
+We no longer support global installation of Create React App.
+
+ChatGPT
+The error message you're seeing is because the global installation of create-react-app is no longer supported. This change helps to prevent issues where a globally installed package can become out of date compared to the version required by a particular project.
+
+You should uninstall the global package, and then use npx to create your React project. npx is a package runner tool that comes with npm, and it will use the latest version of create-react-app every time you create a new project.
+
+Here are the steps:
+
+Uninstall create-react-app globally:
+
+bash
+Copy code
+npm uninstall -g create-react-app
+Clear the npm cache:
+
+bash
+Copy code
+npm cache verify
+or
+
+bash
+Copy code
+npm cache clean --force
+Note: The --force command should be used as a last resort.
+
+Now, create your new project using npx:
+
+bash
+Copy code
+npx create-react-app@latest my-app
+Replace my-app with the name you want for your project. This command will download and use the latest version of create-react-app for your new project, even if an older version was previously installed on your machine.
+
+
+User
+It works! Thanks
+
+ChatGPT
+You're welcome! I'm glad to hear that it worked. If you have any more questions or need further help, feel free to ask. Happy coding with your new React project!
