@@ -31,4 +31,14 @@ In order to run this application locally on your system, please follow the steps
     ```
 The application should now be running at `http://localhost:3000/`.
 
-To switch between locales, we have a select on UI.
+To switch between locales, we have a select on UI and you can visit these example URLs:
+1. For English:
+    ```
+    http://localhost:3000/en
+    ```
+2. For Spanish:
+    ```
+    http://localhost:3000/es
+    ```
+
+Remember to replace the language code (en/es) in the URL with the desired locale's code.
